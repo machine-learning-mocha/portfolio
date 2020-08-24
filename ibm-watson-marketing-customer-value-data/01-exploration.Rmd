@@ -1,0 +1,37 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+# IBM Watson Marketing Customer Value Data
+
+## Limpando espaço de trabalho
+```{r}
+rm(list = ls())
+```
+## Carregando as bibliotecas
+```{r}
+#### LIBS
+library(readr)
+library(tidyverse)
+library(tidyquant)
+library(recipes)
+library(mlbench)
+```
+## Carregando os dados
+```{r}
+df <- read_csv("WA_Fn-UseC_-Marketing-Customer-Value-Analysis.csv")
+```
+## Organizando os nomes dos dados
+```{r}
+names(df) <- gsub(" ", "_", tolower(names(df)))
+```
+## Exploratory Data Analysis (EDA)
+```{r}
+#### Exploratory Data Analysis (EDA)
+head(df)
+summary(df)
+```
+
+# Referências
+- https://rstudio-pubs-static.s3.amazonaws.com/538579_204ebd513ebf4094b7e61897794848b5.html
+- https://www.kaggle.com/pankajjsh06/ibm-watson-marketing-customer-value-data

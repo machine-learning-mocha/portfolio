@@ -104,3 +104,4 @@ venv.bak/
 .mypy_cache/
 music/training_checkpoints/
 node_modules/
+.Rproj.user
